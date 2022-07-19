@@ -31,3 +31,4 @@ datetime
 pytz
 tensorflow
 plotly
+altair

@@ -4,7 +4,6 @@ from datetime import date
 from plotly import graph_objs as go
 import pandas as pd
 import numpy as np
-import san
 #from get_data import load_data
 import trainer_advanced
 
