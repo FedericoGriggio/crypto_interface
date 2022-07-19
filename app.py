@@ -54,9 +54,7 @@ trainer.extract_xy_tr_te()
 trainer.padding_seq()
 pred = trainer.get_prediction()
 
-last_known_days = trainer.target_scaler.inverse_transform(
-    np.array(
-        trainer.X_test_pad)[0,:,0].reshape(-1,1))
+last_known_days = trainer.real_y_test
 
 # Under the Graph show Metric of our prediction for the next three days compared to the value t -1
 
