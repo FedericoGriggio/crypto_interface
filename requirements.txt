@@ -30,3 +30,4 @@ termcolor
 datetime
 pytz
 tensorflow
+plotly
