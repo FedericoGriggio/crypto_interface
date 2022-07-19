@@ -146,7 +146,7 @@ class Trainer():
             value=-1).reshape(1, self.memory, self.X_test.shape[1])
 
         self.X_for_prediction_pad = pad_sequences(
-            self.X_test,
+            self.X_for_prediction,
             dtype='float32',
             value=-1).reshape(1, self.memory, self.X_test.shape[1])
 
@@ -280,6 +280,7 @@ class Trainer():
         self.model_a = joblib.load('model.joblib')
         self.prediction = np.array(self.model_a.predict(self.X_for_prediction_pad))[0,0:3]
         self.prediction = self.target_scaler.inverse_transform(self.prediction)
+        self.real_y_test = self.target_scaler.inverse_transform(self.y_test)
         return self.prediction
 
     # PARAMETERS FOR GCP BASEMODEL UPLOAD
