@@ -32,3 +32,4 @@ pytz
 tensorflow
 plotly
 altair
+matplotlib
