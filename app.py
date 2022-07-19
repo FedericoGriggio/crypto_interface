@@ -64,7 +64,7 @@ last_known_days = trainer.target_scaler.inverse_transform(
 col1, col2, col3 = st.columns(3)
 
 col1.metric(label="In One Day", value=f'${pred[0,0].item()}',
-            delta=pred[0,0].item() - last_known_days[4,0].item())
+            delta=pred[0,0].item() - last_known_days[2,0].item())
 
 col2.metric(label="In Two Days", value=f'${pred[1,0].item()}',
             delta=pred[1,0].item() - pred[0,0].item())
