@@ -42,7 +42,7 @@ class Trainer():
         self.experiment_name = EXPERIMENT_NAME
 
         # days of X_test
-        self.memory = 5
+        self.memory = 3
 
         # functions parameters:
         self.train_splits = 10000
