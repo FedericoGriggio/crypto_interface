@@ -41,8 +41,8 @@ trainer.preproc_data()
 # Plot Graph
 def plot_raw_data():
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=data.index,
-                             y=data['price_usd']))
+    fig.add_trace(go.Scatter(x=trainer.original_data.index,
+                             y=trainer.original_data['price_usd']))
     fig.layout.update(title_text='Time Series Ethereum Price',
                       xaxis_rangeslider_visible=True)
     st.plotly_chart(fig)
@@ -73,7 +73,7 @@ col3.metric(label="In Three Days", value=f'${pred[2,0].item()}',
             delta=pred[2,0].item() - pred[1,0].item(), delta_color="normal")
 
 st.subheader('Raw data')
-st.write(data.tail())
+st.write(trainer.original_data.tail())
 
 #if __name__ == "__main__":
     #data = load_data()
