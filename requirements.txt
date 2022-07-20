@@ -33,3 +33,4 @@ tensorflow
 plotly
 altair
 matplotlib
+pillow
