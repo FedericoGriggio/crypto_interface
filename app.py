@@ -8,7 +8,7 @@ import numpy as np
 #from get_data import load_data
 import trainer_advanced
 from PIL import Image
-from turtle import width
+#from turtle import width
 import altair as alt
 
 # import final_python_file
