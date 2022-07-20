@@ -34,4 +34,3 @@ plotly
 altair
 matplotlib
 pillow
-turtle
