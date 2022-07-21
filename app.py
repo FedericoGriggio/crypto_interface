@@ -22,9 +22,9 @@ st.set_page_config(page_title=None, page_icon=None, layout="wide", initial_sideb
 
 # Add image
 image = Image.open('logo.png')
-st.image(image, width = 100)
+st.image(image, width = 90)
 
-st.title('Cryptocurrencies Prediction App')
+st.title('Chainer Oracle App')
 
 # Data for Graph
 
@@ -67,8 +67,6 @@ def plot_raw_data():
                         size=18,
                         color="White"))
     st.plotly_chart(fig)
-
-
 
 # #####
 # import plotly.graph_objects as go
@@ -133,14 +131,18 @@ pred_d1_fromatted = "{:.2f}".format(pred[0,0].item())
 pred_d2_fromatted = "{:.2f}".format(pred[1,0].item())
 pred_d3_fromatted = "{:.2f}".format(pred[2,0].item())
 
+pred_d1_fromatted = pred_d1_fromatted[:1] + ',' + pred_d1_fromatted[1:]
+pred_d2_fromatted = pred_d1_fromatted[:1] + ',' + pred_d2_fromatted[1:]
+pred_d3_fromatted = pred_d1_fromatted[:1] + ',' + pred_d3_fromatted[1:]
+
 col1.metric(label=pred_day_1, value=f'${pred_d1_fromatted}',
-            delta=pred[0,0].item() - last_known_days[2,0].item())
+            delta="{:.2f}".format(pred[0,0].item() - last_known_days[2,0].item()))
 
 col2.metric(label=pred_day_2, value=f'${pred_d2_fromatted}',
-            delta=pred[1,0].item() - pred[0,0].item())
+            delta="{:.2f}".format(pred[1,0].item() - pred[0,0].item()))
 
 col3.metric(label=pred_day_3, value=f'${pred_d3_fromatted}',
-            delta=pred[2,0].item() - pred[1,0].item(), delta_color="normal")
+            delta="{:.2f}".format(pred[2,0].item() - pred[1,0].item()), delta_color="normal")
 
 # today = datetime.date.today()
 #st.subheader('Raw data')
