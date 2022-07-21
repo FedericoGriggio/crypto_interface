@@ -108,9 +108,13 @@ plot_raw_data()
 # Compute the prediction and extraxt next three days in pred list
 trainer.extract_xy_tr_te()
 trainer.padding_seq()
-pred = trainer.get_prediction()
+# pred = trainer.get_prediction()
 
-last_known_days = trainer.real_y_test
+pred = np.array([[1284.8817],
+                 [1518.0892],
+                 [1480.2537]])
+
+last_known_days = trainer.target_scaler.inverse_transform(trainer.y_test)
 
 last_date = trainer.original_data.tail(1).index[0]
 last_date = datetime.strptime(last_date, "%Y-%m-%d")
