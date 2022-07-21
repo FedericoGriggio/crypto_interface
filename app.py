@@ -24,7 +24,7 @@ st.set_page_config(page_title=None, page_icon=None, layout="wide", initial_sideb
 image = Image.open('logo.png')
 st.image(image, width = 90)
 
-st.title('Chainer Oracle App')
+st.title('Chain Oracle App')
 
 # Data for Graph
 
