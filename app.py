@@ -59,7 +59,7 @@ def plot_raw_data():
                       xaxis_title="Time (days)",
                       yaxis_title="ETH (usd)",
                       xaxis_rangeslider_visible=True,
-                      width=1300,
+                      width=1400,
                       height=600,
                       template="plotly_dark",
                       font=dict(
