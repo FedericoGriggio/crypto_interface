@@ -59,8 +59,8 @@ def plot_raw_data():
                       xaxis_title="Time (days)",
                       yaxis_title="ETH (usd)",
                       xaxis_rangeslider_visible=True,
-                      width=1800,
-                      height=900,
+                      width=1300,
+                      height=600,
                       template="plotly_dark",
                       font=dict(
                         family="Courier New, monospace",
@@ -69,7 +69,6 @@ def plot_raw_data():
     st.plotly_chart(fig)
 
 
-plot_raw_data()
 
 # #####
 # import plotly.graph_objects as go
@@ -150,3 +149,6 @@ col3.metric(label=pred_day_3, value=f'${pred_d3_fromatted}',
 #if __name__ == "__main__":
     #data = load_data()
     #print(data.shape)
+
+
+plot_raw_data()
